@@ -7,6 +7,7 @@
 }
 
 body {
+  position: relative;
   background-color: #c0e4f7;
   display: flex;
   font-family: "Muli", sans-serif;
@@ -14,7 +15,12 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px;
-  min-height: 100vh;
+  min-height: 95vh;
+}
+@media screen and (max-width: 400px) {
+  body {
+    background-color: #e0f4ff;
+  }
 }
 textarea {
   visibility: visible;
@@ -39,10 +45,15 @@ textarea {
   background-color: #017fe7;
   /* background-color: #001f61; */
   border-radius: 7px 7px 0 0;
+  position: absolute;
   color: #fff;
   font-family: "Muli" "century gothic";
-  padding: 3px 15px 10px;
-  left: 30%;
+  padding: 3px 10px 10px;
+  left: 11%;
+  top: -3%;
+  /* height: 30px; */
+  width: 240px;
+  text-align: center;
   text-align: center;
   z-index: -1;
 }
@@ -52,6 +63,12 @@ textarea {
 }
 #alert-box.active {
   transform: translateY(1%);
+}
+#alert-box.active {
+  visibility: visible;
+}
+#alert-box {
+  visibility: hidden;
 }
 .display-area {
   border-radius: 46px;
@@ -110,11 +127,11 @@ button:hover {
   margin-top: 5px;
   height: 5px;
   border-radius: 1em;
-  top: 68px;
+  top: 70px;
   width: 0em;
   /* max-width: 36%; */
   /*1.5, 3.5, 5.5, 7.5, 9.5, 11.5*/
-  background: rgb(71, 52, 131);
+  /* background: rgb(71, 52, 131); */
   transition: all 0.5s ease-in-out;
 }
 
