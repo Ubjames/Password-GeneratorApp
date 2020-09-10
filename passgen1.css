@@ -17,11 +17,11 @@ body {
   padding: 10px;
   min-height: 95vh;
 }
-@media screen and (max-width: 400px) {
+/* @media screen and (max-width: 400px) {
   body {
     background-color: #e0f4ff;
   }
-}
+} */
 textarea {
   visibility: visible;
 }
